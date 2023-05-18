@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('helper', function () {
+    $newDateFormat = changeDateFormate(date('Y-m-d'),'m/d/y');
+
+    dd($newDateFormat);
+});

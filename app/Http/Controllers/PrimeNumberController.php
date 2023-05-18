@@ -15,7 +15,6 @@ class PrimeNumberController extends Controller
 
     }
 
-
     private function calculatePrimeNumber($number){
 
         $arrayPrime = [];
@@ -34,25 +33,15 @@ class PrimeNumberController extends Controller
         if ($number < 2) {
             return false;
         }
-
         //dd("llego:",$number);
-
         for ($i = 2; $i <= $number/2; $i++) {
             //echo "i:". $i."<br>\n";
             //echo "number:". $number."<br>\n";
             if ($number % $i === 0) {
                 return false;
             }
-
         }
-
         return true;
-
-
-
     }
-
-
-
 
 }
